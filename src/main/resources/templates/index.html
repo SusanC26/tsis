@@ -1,5 +1,27 @@
+<!DOCTYPE html>
 <html>
-	<body>
-		Hola Spring Boot!
-	</body>
+<head>
+<script>
+function formSubmit() {
+    document.forms["myForm"].submit();
+}
+</script>
+</head>
+<body>
+
+<h1>Administración de Alumno</h1>
+
+<form name="myForm" action="/alumnos" method="post">
+  <label for="matricula">Matricula:</label>
+  <input type="text" id="matricula" name="matricula"><br><br>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre"><br><br>
+  <label for="carrera">Carrera:</label>
+  <input type="text" id="carrera" name="carrera"><br><br>
+  <input type="button" onclick="formSubmit()" value="Enviar">
+  <input type="button" onclick="formSubmit()" value="Actualizar">
+  <input type="button" onclick="formSubmit()" value="Eliminar">
+  <input type="button" onclick="formSubmit()" value="Mostar Alumnos">
+</form>
+</body>
 </html>
