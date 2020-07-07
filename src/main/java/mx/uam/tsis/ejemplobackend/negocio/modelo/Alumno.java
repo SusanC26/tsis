@@ -36,30 +36,7 @@ public class Alumno {
 		return matricula;
 	}
 	
-	public String getNombre() {
-		// TODO Auto-generated method stub
-		return nombre;
-	}
 	
-	public String getCarrera() {
-		// TODO Auto-generated method stub
-		return carrera;
-	}
-	
-	public void setMatricula(Integer matricula) {
-		
-	this.matricula=matricula;
-	}
-	
-	public void setNombre(String nombre) {
-		this.nombre=nombre;
-		
-	}
-	
-	public void setCarrera(String carrera) {
-	
-      this.carrera=carrera;
-	}
 
 
 

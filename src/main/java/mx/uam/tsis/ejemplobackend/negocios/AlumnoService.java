@@ -47,14 +47,14 @@ public class AlumnoService {
 	}
 	
 	
-	public Optional<Alumno> retieve(Integer matricula)
+	public Alumno retieve(Integer matricula)
 	{
 	  
 		Optional<Alumno>  alumnofind =alumnoRepository.findById(matricula);
 		
 		if(alumnofind.isPresent())
 		{
-			 return alumnoRepository.findById(matricula);
+			 return alumnofind.get();
 		}else
 			return null;
 	}

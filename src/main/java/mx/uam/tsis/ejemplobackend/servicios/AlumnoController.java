@@ -38,7 +38,7 @@ public class AlumnoController {
 	@Autowired
 	private AlumnoService alumnoService;
 	
-	Logger logger =Logger.getLogger("AlumnoController");
+	//Logger logger =Logger.getLogger("AlumnoController");
 	
 	
 	@ApiOperation
@@ -85,9 +85,9 @@ public class AlumnoController {
 	public ResponseEntity <?> retrieve(@PathVariable("matricula") Integer matricula) {
 		
 		///log.info("Buscando al alumno con matricula "+matricula);
-		logger.log( Level.INFO, "alumno con matricula"+matricula);
+		//logger.log( Level.INFO, "alumno con matricula"+matricula);
 		
-		Optional<Alumno> alumno= alumnoService.retieve(matricula);
+		Alumno alumno= alumnoService.retieve(matricula);
 		
 		if(alumno != null) {
 			return ResponseEntity.status(HttpStatus.OK).body(alumno);
