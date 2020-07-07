@@ -50,6 +50,11 @@ public class GrupoController {
 
 	}
 	
+
+	@ApiOperation(
+			value = "Recupera todos los grupos",
+			notes = "Permite recuperar todos los grupos existentes"
+			) 
 	@GetMapping(path = "/grupos", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity <?> retrieveAll() {
 		
