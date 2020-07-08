@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
@@ -16,6 +17,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Data
 @Entity//indica que hay que persistir en BD
+@EqualsAndHashCode
 public class Alumno {
 	
 	@NotNull
@@ -31,14 +33,6 @@ public class Alumno {
 	@ApiModelProperty(notes="Carrera del alumno", required=true)
 	private String carrera;
 	
-	public Integer getMatricula() {
-		// TODO Auto-generated method stub
-		return matricula;
-	}
-	
-	
-
-
 
 	
 }

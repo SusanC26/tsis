@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 
@@ -33,6 +34,7 @@ public class Grupo {
 	
 	@Builder.Default
 	@OneToMany(targetEntity=Alumno.class, fetch= FetchType.LAZY,cascade = CascadeType.MERGE)
+	@JoinColumn(name="id")//no crea tabla intermedia
 	private List<Alumno> alumnos =new ArrayList <> ();
 	
 	public boolean addAlumno(Alumno alumno)
